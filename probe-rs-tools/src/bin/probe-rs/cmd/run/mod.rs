@@ -114,6 +114,7 @@ impl Cmd {
                 loader,
                 self.shared_options.chip_erase,
             )?;
+            std::thread::sleep(Duration::from_millis(100));
 
             // reset the core to leave it in a consistent state after flashing
             session
